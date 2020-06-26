@@ -25,10 +25,10 @@ class Tasks(Resource):
         return resp
 
     def delete(self):
-        if "task" not in request.form:
+        if "task" not in request.args:
             abort(400, "SYSTEM-ERROR: no task provided")
             return
-        task = request.form["task"]
+        task = request.args["task"]
         tasks = registry.delete_task(task=task)
         resp = jsonify(tasks)
         resp.status_code = 200 
