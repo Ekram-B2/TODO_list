@@ -2,6 +2,12 @@ from flask import Flask, Blueprint
 from api.todo_list import ns as list_ns
 from api import rest_api
 from itemlist.listmanager import SimpleListManager
+
+import logging
+
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
+
 def create_app():
     # 1. Create a instance of flask
     app = Flask(__name__)

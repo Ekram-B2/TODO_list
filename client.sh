@@ -46,8 +46,8 @@ main() {
         else
             echo "
             Please provide the proper command
-            To delete tasks, use: delete_task arg1 arg2 ... argn 
-            To add tasks, use: add_task arg1 arg2 .. argn 
+            To delete tasks, use: delete_task arg1,arg2, ... ,argn 
+            To add tasks, use: add_task arg1,arg2, .. ,argn 
             To get all the tasks, use: get_all_tasks
             To exit: press q
 
